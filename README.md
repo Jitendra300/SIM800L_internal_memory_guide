@@ -46,7 +46,7 @@ Now go to the minicom terminal window and then write:
 `AT+FSCREATE=1.amr`
 then
 `AT+FSWRITE=1.amr,0,XXXX,10` where XXXX is the number of bits the file is.
-
+This will give you `>` and now we have to fastly return the file by going into the other terminal and doing `cat 1.amr > /dev/XXXX` and 
 This has created the file. And now to play this file during call all it takes is this command:
 
 `AT+CREC=4,"C:\1.amr",0,100`
