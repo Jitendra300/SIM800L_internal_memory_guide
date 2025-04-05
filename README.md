@@ -58,9 +58,9 @@ NOTE: You could have also saved the file in **C:\Users** directory.
 
 # Battle of circuits ;)
 Circuit which has DFPlayer mini : <br><br>
-![Circuit with DFPlayer mini](circuit_with_DFPlayer_mini.png) <br><br>
+![Circuit with DFPlayer mini](/images/circuit_with_DFPlayer_mini.png) <br><br>
 Circuit which has no DFPlayer mini : <br><br>
-![Circuit with no DFPlayer mini](circuit_without_DFPlayer_mini.png) <br><br>
+![Circuit with no DFPlayer mini](/images/circuit_without_DFPlayer_mini.png) <br><br>
 
 # Final Thoughts
 I had extreme fun changing the design of the whole circuit from using DFPlayer mini to just using GSM-SIM800L. The complexity reduced a lot as we can see in the below images. But there are several drawbacks too like:
