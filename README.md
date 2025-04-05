@@ -21,9 +21,16 @@ Recently I have been playing a lot with the GSM-SIM800L module which is used for
   To convert the .mp3 / .wav files into .amr files which can be uploaded into SIM800L.
 
 # Circuit diagram
-Will upload later don't worry! 
+Here is the connection below done using Fritzing: <br><br>
+![Circuit connection](/images/connection_circuit.png)
+<br><br>
+More info:
+The RX pin of USB-TTL goes to TX of SIM800L directly, <br>
+The TX pin of USB-TTL goes to RX of SIM800L using one voltage divider, <br>
+The GND and VCC of USB-TTL goes to DC-DC Buck convertor and then to SIM800L GND and VCC. <br>
+**NOTE**: Certain times GSM module can have issues working as its very sensitive towards current and voltage thus add one capacitor! <br>
 
-# Start
+# Let's GO
 First of all have your voice files in any format which ffmpeg is comfortable (which it obviously will) and then try to convert them into .amr files by using ffmpeg tool.<br><br>
 Command to turn any .mp3 files into .amr files is: `ffmpeg -i input.mp3 output.amr`
 <br><br>
@@ -48,6 +55,12 @@ where XXXX is the number of bits the file is.
 This will give you `>` and now we have to fastly return the file by going into the other terminal and doing `cat 1.amr > /dev/XXXX` and this has created the file. And now to play this file during call all it takes is this command: `AT+CREC=4,"C:\1.amr",0,100` <br><br>
 
 NOTE: You could have also saved the file in **C:\Users** directory.
+
+# Battle of circuits ;)
+Circuit which has DFPlayer mini : <br><br>
+![Circuit with DFPlayer mini](circuit_with_DFPlayer_mini.png) <br><br>
+Circuit which has no DFPlayer mini : <br><br>
+![Circuit with no DFPlayer mini](circuit_without_DFPlayer_mini.png) <br><br>
 
 # Final Thoughts
 I had extreme fun changing the design of the whole circuit from using DFPlayer mini to just using GSM-SIM800L. The complexity reduced a lot as we can see in the below images. But there are several drawbacks too like:
